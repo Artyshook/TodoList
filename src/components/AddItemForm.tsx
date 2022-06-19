@@ -1,5 +1,6 @@
 import React, {ChangeEvent, KeyboardEvent, useState} from 'react';
 
+
 type AddTaskFormPropsType = {
     callBack: (title: string)=> void
 }
@@ -38,6 +39,7 @@ export const AddItemForm = (props:AddTaskFormPropsType) => {
                        onKeyPress={onKeyPressHandler}
                        className={error ? "error" : ""}
                 />
+
                 <button onClick={addItem}>+</button>
                 {error && <div className="error-message">{error}</div>}
             </div>
